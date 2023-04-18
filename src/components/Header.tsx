@@ -55,7 +55,8 @@ export default function Header() {
             scrollTo("main", -48)
           }}
         >
-          >
+        <Show 
+          when={iconTitle().title}>
             <span class="ml-1 font-extrabold text-slate-7 dark:text-slate">
               {iconTitle().title}
             </span>
