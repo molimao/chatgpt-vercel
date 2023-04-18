@@ -31,6 +31,12 @@ export default function Header() {
   const { store } = RootStore
   const navigate = useNavigate()
   const iconTitle = createMemo(() => splitEmoji(store.sessionSettings.title))
+
+  function handleImageClick() {
+    const imageContainer = document.getElementById("image-container");
+    imageContainer.style.display = "block";
+  }
+
   return (
     <>
       <div
@@ -59,30 +65,26 @@ export default function Header() {
             when={iconTitle().title}
             fallback={
               <>
-                <span class="text-transparent font-extrabold bg-clip-text bg-gradient-to-r dark:from-yellow-300 from-yellow-600 dark:to-red-700 to-red-700 mr-1">
+                <a
+                  href="#"
+                  class="text-transparent font-extrabold bg-clip-text bg-gradient-to-r dark:from-yellow-300 from-yellow-600 dark:to-red-700 to-red-700 mr-1"
+                  onClick={handleImageClick}
+                >
                   ChatGPT
-                </span>
+                </a>
                 <span class="ml-1 font-extrabold text-slate-7 dark:text-slate">
                   Fitz
                 </span>
-                <a
-                  class="ml-2 <sm:hidden"
-                  href="https://www.aiwaitlist.com"
-                >
+                <div id="image-container" style={{ display: "none" }}>
                   <img
-                    alt="支付宝二维码"
+                    alt="支付宝"
                     src="https://s1.ax1x.com/2023/04/18/p9ipDoV.jpg"
                   />
-                </a>
-                <a
-                  class="ml-2"
-                  href="https://www.aiwaitlist.com"
-                >
                   <img
-                    alt="微信收款二维码"
+                    alt="微信"
                     src="https://s1.ax1x.com/2023/04/18/p9ipGi8.jpg"
                   />
-                </a>
+                </div>
               </>
             }
           >
