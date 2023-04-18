@@ -97,7 +97,7 @@ export default function Header() {
                         }}>
                          <img
                          alt="支付宝"
-                          src="https://s1.ax1x.com/2023/04/18/p9ipDoV.jpg"
+                          src="https://3o.hk/images/2023/04/18/Xnip2023-04-18_14-48-52.jpg"
                           class="w-32 h-32 object-contain cursor-pointer"
                               />
                           </button>
@@ -110,7 +110,7 @@ export default function Header() {
                             }}>
                             <img
                               alt="微信"
-                              src="https://s1.ax1x.com/2023/04/18/p9ipGi8.jpg"
+                              src="https://3o.hk/images/2023/04/18/Xnip2023-04-18_14-49-01.jpg"
                               class="w-32 h-32 object-contain cursor-pointer"
                             />
                           </button>
