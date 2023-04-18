@@ -37,6 +37,11 @@ export default function Header() {
     imageContainer.style.display = "block";
   }
 
+  function handleCloseClick() {
+    const imageContainer = document.getElementById("image-container");
+    imageContainer.style.display = "none";
+  }
+
   return (
     <>
       <div
@@ -78,6 +83,8 @@ export default function Header() {
                 <div id="image-container" style={{ display: "none" }}>
                   <div class="fixed top-0 left-0 w-full h-full flex justify-center items-center bg-gray-500 bg-opacity-50">
                     <div class="bg-white shadow-lg rounded-lg p-6">
+                    <button class="absolute top-0 right-0 mt-4 mr-4 text-gray-500 hover:text-gray-700 cursor-pointer" 
+                    onClick={handleCloseClick}>X</button>
                       <div class="text-xl font-bold mb-4">请选择支付方式</div>
                       <div class="flex justify-around">
                         <div>
