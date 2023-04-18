@@ -1,7 +1,7 @@
 {
-  "name": "chatgpt-vercel",
+  "name": "chatgpt-fitz",
   "version": "1.0.0",
-  "description": "Elegant and Powerful. Powered by OpenAI and Vercel",
+  "description": "Powered by OpenAI and Vercel",
   "type": "module",
   "license": "MIT",
   "scripts": {
