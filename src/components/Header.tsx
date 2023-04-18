@@ -31,10 +31,20 @@ export default function Header() {
   const { store } = RootStore
   const navigate = useNavigate()
   const iconTitle = createMemo(() => splitEmoji(store.sessionSettings.title))
+  const [showPayImg, setShowPayImg] = createSignal(false)
+  const [showWechatImg, setShowWechatImg] = createSignal(false)
 
-  function handleImageClick() {
-    const imageContainer = document.getElementById("image-container");
-    imageContainer.style.display = "block";
+  function handlePayClick() {
+    setShowPayImg(true)
+  }
+
+  function handleWechatClick() {
+    setShowWechatImg(true)
+  }
+
+  function handleCloseClick() {
+    setShowPayImg(false)
+    setShowWechatImg(false)
   }
 
   return (
@@ -61,37 +71,51 @@ export default function Header() {
             scrollTo("main", -48)
           }}
         >
-        <Show
+          <Show
             when={iconTitle().title}
             fallback={
               <>
                 <a
                   href="#"
                   class="text-transparent font-extrabold bg-clip-text bg-gradient-to-r dark:from-yellow-300 from-yellow-600 dark:to-red-700 to-red-700 mr-1"
-                  onClick={handleImageClick}
+                  onClick={handlePayClick}
                 >
-                  ChatGPT
+                  支付宝
                 </a>
-                <span class="ml-1 font-extrabold text-slate-7 dark:text-slate">
-                  Fitz
-                </span>
-                <div id="image-container" style={{ display: "none" }}>
-                  <img
-                    alt="支付宝"
-                    src="https://s1.ax1x.com/2023/04/18/p9ipDoV.jpg"
-                  />
-                  <img
-                    alt="微信"
-                    src="https://s1.ax1x.com/2023/04/18/p9ipGi8.jpg"
-                  />
-                </div>
+                <a
+                  href="#"
+                  class="text-transparent font-extrabold bg-clip-text bg-gradient-to-r dark:from-yellow-300 from-yellow-600 dark:to-red-700 to-red-700"
+                  onClick={handleWechatClick}
+                >
+                  微信
+                </a>
               </>
             }
           >
             <span class="ml-1 font-extrabold text-slate-7 dark:text-slate">
               {iconTitle().title}
-        
             </span>
+          </Show>
+          <Show when={showPayImg() || showWechatImg()}>
+            <div
+              class="fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-50 flex justify-center items-center"
+              onClick={handleCloseClick}
+            >
+              <Show when={showPayImg()}>
+                <img
+                  alt="支付宝"
+                  src="https://s1.ax1x.com/2023/04/18/p9ipDoV.jpg"
+                  class="max-w-full max-h-full"
+                />
+              </Show>
+              <Show when={showWechatImg()}>
+                <img
+                  alt="微信"
+                  src="https://s1.ax1x.com/2023/04/18/p9ipGi8.jpg"
+                  class="max-w-full max-h-full"
+                />
+              </Show>
+            </div>
           </Show>
         </div>
         <ThemeToggle />
