@@ -43,8 +43,8 @@ export default function Header() {
         id="logo"
         class="pl-1em cursor-pointer inline-block"
         onClick={() => {
-          navigate("/", { replace: true })
-          loadSession("index")
+          navigate("/", { replace: true });
+          loadSession("index");
         }}
       >
         <Show
@@ -58,10 +58,10 @@ export default function Header() {
         <div
           class="flex items-center text-2xl cursor-pointer"
           onClick={() => {
-            scrollTo("main", -48)
+            scrollTo("main", -48);
           }}
         >
-        <Show
+          <Show
             when={iconTitle().title}
             fallback={
               <>
@@ -76,26 +76,44 @@ export default function Header() {
                   Fitz
                 </span>
                 <div id="image-container" style={{ display: "none" }}>
-                  <img
-                    alt="支付宝"
-                    src="https://s1.ax1x.com/2023/04/18/p9ipDoV.jpg"
-                  />
-                  <img
-                    alt="微信"
-                    src="https://s1.ax1x.com/2023/04/18/p9ipGi8.jpg"
-                  />
+                  <div class="fixed top-0 left-0 w-full h-full flex justify-center items-center bg-gray-500 bg-opacity-50">
+                    <div class="bg-white shadow-lg rounded-lg p-6">
+                      <div class="text-xl font-bold mb-4">请选择支付方式</div>
+                      <div class="flex justify-around">
+                        <div>
+                          <button onClick={handleCloseClick}>
+                            <img
+                              alt="支付宝"
+                              src="https://s1.ax1x.com/2023/04/18/p9ipDoV.jpg"
+                              class="w-32 h-32 object-contain cursor-pointer"
+                            />
+                          </button>
+                          <p class="text-center mt-2">支付宝</p>
+                        </div>
+                        <div>
+                          <button onClick={handleCloseClick}>
+                            <img
+                              alt="微信"
+                              src="https://s1.ax1x.com/2023/04/18/p9ipGi8.jpg"
+                              class="w-32 h-32 object-contain cursor-pointer"
+                            />
+                          </button>
+                          <p class="text-center mt-2">微信</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </>
             }
           >
             <span class="ml-1 font-extrabold text-slate-7 dark:text-slate">
               {iconTitle().title}
-        
             </span>
           </Show>
         </div>
         <ThemeToggle />
       </header>
     </>
-  )
+  );
 }
