@@ -81,17 +81,23 @@ export default function Header() {
                       <div class="text-xl font-bold mb-4">请选择支付方式</div>
                       <div class="flex justify-around">
                         <div>
-                          <button onClick={handleCloseClick}>
-                            <img
-                              alt="支付宝"
-                              src="https://s1.ax1x.com/2023/04/18/p9ipDoV.jpg"
-                              class="w-32 h-32 object-contain cursor-pointer"
-                            />
+                        <button onClick={() => {
+                        const imageContainer = document.getElementById("image-container");
+                         imageContainer.style.display = "none";
+                        }}>
+                         <img
+                         alt="支付宝"
+                          src="https://s1.ax1x.com/2023/04/18/p9ipDoV.jpg"
+                          class="w-32 h-32 object-contain cursor-pointer"
+                              />
                           </button>
                           <p class="text-center mt-2">支付宝</p>
                         </div>
                         <div>
-                          <button onClick={handleCloseClick}>
+                          <button onClick={() => {
+                            const imageContainer = document.getElementById("image-container");
+                             imageContainer.style.display = "none";
+                            }}>
                             <img
                               alt="微信"
                               src="https://s1.ax1x.com/2023/04/18/p9ipGi8.jpg"
