@@ -85,7 +85,7 @@ export default function Header() {
                     <div class="bg-white shadow-lg rounded-lg p-6">
                     <button class="absolute top-0 right-0 mt-4 mr-4 text-gray-500 hover:text-gray-700 cursor-pointer" 
                     onClick={handleCloseClick}>X</button>
-                      <div class="text-xl font-bold mb-4">请选择支付方式</div>
+                      <div class="text-xl font-bold mb-4">请选择适合您的方式扫码转账，请备注您的邮箱地址或者手机号，在完成转账后的 2 小时内，网站密码会以短信或者邮件的形式发送给您，请注意查收。点击任意图片可以关闭弹窗</div>
                       <div class="flex justify-around">
                         <div>
                         <button onClick={() => {
