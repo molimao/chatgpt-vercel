@@ -55,10 +55,40 @@ export default function Header() {
             scrollTo("main", -48)
           }}
         >
-        <Show 
-          when={iconTitle().title}>
+        <Show
+            when={iconTitle().title}
+            fallback={
+              <>
+                <span class="text-transparent font-extrabold bg-clip-text bg-gradient-to-r dark:from-yellow-300 from-yellow-600 dark:to-red-700 to-red-700 mr-1">
+                  ChatGPT
+                </span>
+                <span class="ml-1 font-extrabold text-slate-7 dark:text-slate">
+                  Fitz
+                </span>
+                <a
+                  class="ml-2 <sm:hidden"
+                  href="https://www.aiwaitlist.com"
+                >
+                  <img
+                    alt="支付宝二维码"
+                    src="https://s1.ax1x.com/2023/04/18/p9ipDoV.jpg"
+                  />
+                </a>
+                <a
+                  class="ml-2"
+                  href="https://www.aiwaitlist.com"
+                >
+                  <img
+                    alt="微信收款二维码"
+                    src="https://s1.ax1x.com/2023/04/18/p9ipGi8.jpg"
+                  />
+                </a>
+              </>
+            }
+          >
             <span class="ml-1 font-extrabold text-slate-7 dark:text-slate">
               {iconTitle().title}
+        
             </span>
           </Show>
         </div>
