@@ -76,11 +76,8 @@ export default function Header() {
                   onClick={handleImageClick}
                 >
                   ChatGPT
-                <a
-                  href="#"
-                  class="text-transparent font-extrabold bg-clip-text bg-gradient-to-r dark:from-yellow-300 from-yellow-600 dark:to-red-700 to-red-700 mr-1"
-                  onClick={handleImageClick}
-                >
+                </a>
+                <span class="ml-1 font-extrabold text-slate-7 dark:text-slate">
                   Fitz
                 </span>
                 <div id="image-container" style={{ display: "none" }}>
@@ -88,7 +85,7 @@ export default function Header() {
                     <div class="bg-white shadow-lg rounded-lg p-6">
                     <button class="absolute top-0 right-0 mt-4 mr-4 text-gray-500 hover:text-gray-700 cursor-pointer" 
                     onClick={handleCloseClick}>X</button>
-                      <div class="text-xl font-bold mb-4">支付时，请备注您的邮箱地址。完成支付后，您将在 2 小时内通过邮件收到网站密码。点击图片可以关闭弹窗</div>
+                      <div class="text-xl font-bold mb-4">请选择支付方式</div>
                       <div class="flex justify-around">
                         <div>
                         <button onClick={() => {
