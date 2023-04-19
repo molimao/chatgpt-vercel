@@ -83,35 +83,35 @@ export default function Header() {
                 <div id="image-container" style={{ display: "none" }}>
                   <div class="fixed top-0 left-0 w-full h-full flex justify-center items-center bg-gray-500 bg-opacity-50">
                     <div class="bg-white shadow-lg rounded-lg p-6">
-                      <button class="absolute top-0 right-0 mt-4 mr-4 text-gray-500 hover:text-gray-700 cursor-pointer"
-                        onClick={handleCloseClick}>X</button>
-                      <div class="text-l mb-4" style="font-size: 14px; font-weight: normal;">尊敬的用户，您好！非常感谢您愿意支持Fitz，您可以选择三种订阅策略：9.9元/月，49 元/半年，89元/年。订阅周期为每个月的19号至次月19号。<br/>请选择适合您的方式扫码转账，请务必备注您的邮箱地址或者手机号。<br/>在完成转账后的 2 小时内，网站密码会以短信或者邮件的形式发送给您，请注意查收。<br/>点击任意图片可以关闭弹窗
-                      </div>
-                        <div class="flex justify-around">
-                          <div>
-                            <button onClick={() => {
-                              const imageContainer = document.getElementById("image-container")
-                              imageContainer.style.display = "none"
-                            } }>
-                              <img
-                                alt="支付宝"
-                                src="https://3o.hk/images/2023/04/18/Xnip2023-04-18_14-48-52.jpg"
-                                class="w-32 h-32 object-contain cursor-pointer" />
-                            </button>
-                            <p class="text-center mt-2">支付宝</p>
-                          </div>
-                          <div>
-                            <button onClick={() => {
-                              const imageContainer = document.getElementById("image-container")
-                              imageContainer.style.display = "none"
-                            } }>
-                              <img
-                                alt="微信"
-                                src="https://3o.hk/images/2023/04/18/Xnip2023-04-18_14-49-01.jpg"
-                                class="w-32 h-32 object-contain cursor-pointer" />
-                            </button>
-                            <p class="text-center mt-2">微信</p>
-                          </div>
+                    <button class="absolute top-0 right-0 mt-4 mr-4 text-gray-500 hover:text-gray-700 cursor-pointer" 
+                    onClick={handleCloseClick}>X</button>
+                      <div class="text-xl font-bold mb-4">尊敬的用户，您好！非常感谢您愿意支持Fitz，您可以选择三种订阅策略：9.9元/月，49 元/半年，89元/年。订阅周期为每个月的19号至次月19号。<br/>请选择适合您的方式扫码转账，请备注您的邮箱地址或者手机号，在完成转账后的 2 小时内，网站密码会以短信或者邮件的形式发送给您，请注意查收。<br/>点击任意图片可以关闭弹窗</div>
+                      <div class="flex justify-around">
+                        <div>
+                        <button onClick={() => {
+                        const imageContainer = document.getElementById("image-container");
+                         imageContainer.style.display = "none";
+                        }}>
+                         <img
+                         alt="支付宝"
+                          src="https://3o.hk/images/2023/04/18/Xnip2023-04-18_14-48-52.jpg"
+                          class="w-32 h-32 object-contain cursor-pointer"
+                              />
+                          </button>
+                          <p class="text-center mt-2">支付宝</p>
+                        </div>
+                        <div>
+                          <button onClick={() => {
+                            const imageContainer = document.getElementById("image-container");
+                             imageContainer.style.display = "none";
+                            }}>
+                            <img
+                              alt="微信"
+                              src="https://3o.hk/images/2023/04/18/Xnip2023-04-18_14-49-01.jpg"
+                              class="w-32 h-32 object-contain cursor-pointer"
+                            />
+                          </button>
+                          <p class="text-center mt-2">微信</p>
                         </div>
                       </div>
                       </></div>
