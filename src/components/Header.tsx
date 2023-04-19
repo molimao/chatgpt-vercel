@@ -85,9 +85,7 @@ export default function Header() {
                     <div class="bg-white shadow-lg rounded-lg p-6">
                     <button class="absolute top-0 right-0 mt-4 mr-4 text-gray-500 hover:text-gray-700 cursor-pointer" 
                     onClick={handleCloseClick}>X</button>
-                      <div class="text-l font-bold mb-4">尊敬的用户，您好！非常感谢您愿意支持Fitz，您可以选择三种订阅策略：9.9元/月，49 元/半年，89元/年。订阅周期为每个月的19号至次月19号。
-                      请选择适合您的方式扫码转账，请务必备注您的邮箱地址或者手机号，在完成转账后的 2 小时内，网站密码会以短信或者邮件的形式发送给您，请注意查收。
-                      点击任意图片可以关闭弹窗</div>
+                      <div class="text-l mb-4" style="font-size: 14px; font-weight: normal;">尊敬的用户，您好！非常感谢您愿意支持Fitz，您可以选择三种订阅策略：9.9元/月，49 元/半年，89元/年。订阅周期为每个月的19号至次月19号。</br>请选择适合您的方式扫码转账，请务必备注您的邮箱地址或者手机号。</br>在完成转账后的 2 小时内，网站密码会以短信或者邮件的形式发送给您，请注意查收。</br>点击任意图片可以关闭弹窗</div>
                       <div class="flex justify-around">
                         <div>
                         <button onClick={() => {
